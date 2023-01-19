@@ -18,6 +18,9 @@ function displayGlobal(globalData){
    Total Recovered: ${globalData.TotalRecovered}
    </P>
    `;
+   const date=document.getElementById('date');
+   date.innerText=globalData.Date.slice(1, 10);
+   console.log(globalData)
 }
 
 
@@ -39,7 +42,7 @@ const countryData = () => {
         for(let i = 0; countryData.length; i++){  
             const inputCountry=document.getElementById('input-country').value;
 
-            if(inputCountry == countryData[i].Country){
+            if(inputCountry === countryData[i].Country || inputCountry === countryData[i].Slug){
                 console.log(countryData[i].Country);
                 CountryDiv.innerHTML=`<p>
             Country: ${countryData[i].Country}
@@ -56,13 +59,19 @@ const countryData = () => {
             <br/>
             Total Recovered: ${countryData[i].TotalRecovered}
             </p>
-            `
+            `;
+            document.getElementById('input-country').value=""; 
             }
             
         }
        
- 
     }
-
-
+ 
+    
 }
+
+document.getElementById('input-country').addEventListener('keypress', function(e){
+  if(e.key === "Enter"){
+    document.querySelector('.btn').click()
+  }
+})
