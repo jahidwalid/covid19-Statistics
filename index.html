@@ -16,10 +16,10 @@
 </head>
 <body>
 <!-- ============= Top Content ==========  -->
-  <section>
+  <section id="top-section">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 text-center">
                 <h1>COVID 19 STATISTICS</h1>
                 <h4>By <a href="https://jahidwalid.com">Jahid Walid</a></h4>
                 <div class="line"></div>
@@ -29,8 +29,33 @@
     </div>
   </section>
     
-<!-- ============ Statistics Content ========= -->
-
+  <!-- ============ Statistics Content ========= -->
+ <section>
+  <div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control p-2" placeholder="Type your Country" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button onclick="" class="btn btn-primary p-2" type="button">Search</button>
+                </div>
+              </div>
+              <div class="card m-auto mt-5" style="width: 18rem;">
+                <div class="card-body text-center">
+                    <h3>Global Statistic:</h3>
+                    <div id="global-statistics"></div>
+                </div>
+              </div>
+              <div id="country-statistics" class="card m-auto mt-5" style="width: 18rem;">
+                <div class="card-body text-center">
+                    <h3>Country Statistics:</h3>
+                    <p></p>
+                </div>
+              </div>
+        </div>
+    </div>
+  </div>
+ </section>
 
     <script src="./js/main.js"></script>
 </body>

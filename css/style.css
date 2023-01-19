@@ -2,6 +2,9 @@
     margin: 0;
     padding: ;
 }
+a{
+    text-decoration: none;
+}
 body{
     font-family: 'Roboto', sans-serif;
     background-image: url(../img/bg.jpg);
@@ -9,3 +12,34 @@ body{
     background-repeat: no-repeat;
     height: 100vh;
 }
+#top-section{
+    color: white;
+    margin-top: 50px;
+}
+.line{
+    width: 250px;
+    color: white;
+    height: 2px;
+    border-radius: 3px;
+    background: white;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.input-group{
+    width: 50%;
+    margin: auto;
+}
+@media (max-width:991px){
+    .input-group{
+        width: 80%;
+    }
+}
+#global-statistics p{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+
+
